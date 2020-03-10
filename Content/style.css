@@ -1,0 +1,47 @@
+﻿body {
+
+}
+.navbar-default {
+    
+    background-color: #0c5c82;
+    border-color:coral;
+}
+.navbar-default .navbar-nav>li>a{
+    color:#e7e7e7;
+    font-family:Arial;
+}
+.myfooter{
+    background-color:cornflowerblue;
+    padding:10px;
+    font-family:Arial;
+    text-align:justify;
+    height:200px
+}
+
+.subfooter {
+    background-color: #0c5c82;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+.myfooter a,p{
+    color:azure; 
+}
+
+.myfooter h3,ul,p{
+    margin-bottom:10px;
+    font-family:Arial;
+    list-style-type:none;
+
+}
+.logo-size{
+    width:120px;
+    height:50px;
+    background-color:red;
+    margin-top:-7px;
+}
+
+body{
+    padding-top:10px;
+}

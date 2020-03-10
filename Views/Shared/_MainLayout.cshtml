@@ -1,0 +1,134 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+
+    @*<link href="~/Content/bootstrap.min.css" rel="stylesheet" />*@
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="~/Content/style.css" />
+</head>
+<body>
+    <div>
+        <!--Navbar-->
+
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="#" class="navbar-brand">
+                        <img src="~/Images/Logo.jpg" class="logo-size" />
+                    </a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a href="#">
+                                <i class="glyphicon glyphicon-home"></i>
+                                الرئيسية
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <i class="glyphicon glyphicon-folder-open"></i>
+                                أصناف العروض
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <i class="glyphicon glyphicon-info-sign"></i>
+                                حول الموقع
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <i class="glyphicon glyphicon-envelope"></i>
+                                اتصل بنا
+                            </a>
+                        </li>
+
+                    </ul>
+                    <!--Partial Login-->>
+                   @Html.Partial("_Login")
+                </div>
+
+            </div>
+        </nav>
+
+        <div class="container">
+            <div class="row">
+                @RenderBody()
+
+            </div>
+
+        </div>
+        
+        <script src="~/Scripts/jquery-2.2.4.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+        <!--Footer-->
+        <footer class="navbar navbar-fixed-bottom myfooter">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h3>
+                            من نحن؟
+                        </h3>
+                        <p>
+                            بدأت تنفيذ خطط عملها بخطوات ثابته تتقدم و تتقدم بثبات حتى استطاعت المنافسة على المشاريع الكبيرة و ذلك بفضل الله ثم بفضل إدارتها الحكيمة و المتطورة و الجهاز الفني المتكامل و الكادر الوظيفي المؤهل و القدرة المالية الثابته.
+
+                            و تحتل الشركة الآن و بفضل من الله مكانة مرموقة بين شركات المقاولات الوطنية و قد قامت بتنفيذ بعض المشاريع العامة في القطاع الحكومي و الخاص في مجال (المباني) و قد تم ذلك بكفائة عالية و إمكانيات قوية لتكون خطا بيانيا صاعدا من الثقة اللامحدودة بعد تحقيق هذه النجاحات الممتدة منذ تأسيس الشركة.
+                        </p>
+                    </div>
+
+                    <div class="col-md-4">
+                        <h3>
+                            <i class="glyphicon glyphicon-globe"></i>
+                            روابط هامة
+                        </h3>
+
+                        <ul>
+                            <li><a href="#">وظائف للقطاع العام</a></li>
+                            <li><a href="#">وظائف للقطاع الخاص</a></li>
+                            <li><a href="#">وظائف خارج البلاد</a></li>
+                            <li><a href="#">وظائف متنوعة</a></li>
+                        </ul>
+                    </div>
+
+
+                    <div class="col-md-4">
+                        <h3>
+                            <i class="glyphicon glyphicon-envelope"></i>
+                            تواصل معنا
+                        </h3>
+
+                        <ul>
+                            <li><a href="#">صفحتنا على الفيسبوك</a></li>
+                            <li><a href="#">تابعنا على تويتر </a></li>
+                            <li><a href="#">شاهدنا على اليوتيوب</a></li>
+                            <li><a href="#">اترك لنا رسالة</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+            <div class="subfooter">
+                <span>جميع الحقوق محفوظة لموقع التوظيف 2020</span>
+
+            </div>
+
+        </footer>
+
+    </div>
+</body>
+</html>
