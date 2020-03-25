@@ -265,6 +265,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\CategoriesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\JobsController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\TestController.cs" />
     <Compile Include="Global.asax.cs">
@@ -286,10 +287,27 @@
     <Compile Include="Migrations\202003100732293_changedatatypeOfCategoryName.designer.cs">
       <DependentUpon>202003100732293_changedatatypeOfCategoryName.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202003110853118_AddJobsTable.cs" />
+    <Compile Include="Migrations\202003110853118_AddJobsTable.designer.cs">
+      <DependentUpon>202003110853118_AddJobsTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202003110900155_updatetablejob.cs" />
+    <Compile Include="Migrations\202003110900155_updatetablejob.designer.cs">
+      <DependentUpon>202003110900155_updatetablejob.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202003110908389_updatetablejob2.cs" />
+    <Compile Include="Migrations\202003110908389_updatetablejob2.designer.cs">
+      <DependentUpon>202003110908389_updatetablejob2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202003110913106_updatetablejob3.cs" />
+    <Compile Include="Migrations\202003110913106_updatetablejob3.designer.cs">
+      <DependentUpon>202003110913106_updatetablejob3.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\Job.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -327,6 +345,11 @@
     <Content Include="Views\Categories\Details.cshtml" />
     <Content Include="Views\Categories\Edit.cshtml" />
     <Content Include="Views\Categories\Index.cshtml" />
+    <Content Include="Views\Jobs\Create.cshtml" />
+    <Content Include="Views\Jobs\Delete.cshtml" />
+    <Content Include="Views\Jobs\Details.cshtml" />
+    <Content Include="Views\Jobs\Edit.cshtml" />
+    <Content Include="Views\Jobs\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -336,6 +359,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Uploads\" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="Scripts\index.d.ts" />
@@ -355,6 +379,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202003100732293_changedatatypeOfCategoryName.resx">
       <DependentUpon>202003100732293_changedatatypeOfCategoryName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202003110853118_AddJobsTable.resx">
+      <DependentUpon>202003110853118_AddJobsTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202003110900155_updatetablejob.resx">
+      <DependentUpon>202003110900155_updatetablejob.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202003110908389_updatetablejob2.resx">
+      <DependentUpon>202003110908389_updatetablejob2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202003110913106_updatetablejob3.resx">
+      <DependentUpon>202003110913106_updatetablejob3.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
