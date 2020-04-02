@@ -5,9 +5,9 @@
     Layout = "~/Views/Shared/_MainLayout.cshtml";
 }
 
-<h2>Delete</h2>
+<h2>حذف الوظيفة</h2>
 
-<h3>Are you sure you want to delete this?</h3>
+<h3>هل أنت متاكد من حذف الوظيفة</h3>
 <div>
     <h4>Job</h4>
     <hr />
@@ -41,7 +41,8 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.JobImage)
+            <img src="~/Uploads/@Html.DisplayFor(Model=>Model.JobImage)" class="thumbnail" width="48px" height="48px" />
+
         </dd>
 
     </dl>
@@ -50,8 +51,8 @@
         @Html.AntiForgeryToken()
 
         <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Index")
+            <input type="submit" value="تأكيد الحذف" class="btn btn-danger" /> |
+            @Html.ActionLink("العودة الى الوظائف", "Index")
         </div>
     }
 </div>

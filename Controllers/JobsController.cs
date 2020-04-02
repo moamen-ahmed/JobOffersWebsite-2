@@ -12,6 +12,7 @@ using System.IO;
 
 namespace JobOffersWebsite.Controllers
 {
+    [Authorize(Roles = "Admins")]
     public class JobsController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
@@ -87,10 +88,23 @@ namespace JobOffersWebsite.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,JobTitle,JobContent,JobImage,CategoryId")] Job job)
+        public ActionResult Edit(Job job,HttpPostedFileBase upload)
         {
             if (ModelState.IsValid)
             {
+                string oldPath = Path.Combine(Server.MapPath("~/Uploads"), job.JobImage);
+
+                if (upload != null )
+                {
+                    System.IO.File.Delete(oldPath);
+
+
+                    string path = Path.Combine(Server.MapPath("~/Uploads"), upload.FileName);
+                    upload.SaveAs(path);
+                    job.JobImage = upload.FileName;
+                }
+
+
                 db.Entry(job).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
