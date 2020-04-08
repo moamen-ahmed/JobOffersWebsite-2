@@ -304,8 +304,17 @@
     <Compile Include="Migrations\202003110913106_updatetablejob3.designer.cs">
       <DependentUpon>202003110913106_updatetablejob3.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202004041248406_applyforjob.cs" />
+    <Compile Include="Migrations\202004041248406_applyforjob.designer.cs">
+      <DependentUpon>202004041248406_applyforjob.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004060856338_EditJobModel.cs" />
+    <Compile Include="Migrations\202004060856338_EditJobModel.designer.cs">
+      <DependentUpon>202004060856338_EditJobModel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\ApplyForJob.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Job.cs" />
@@ -357,6 +366,13 @@
     <Content Include="Views\Roles\Details.cshtml" />
     <Content Include="Views\Roles\Edit.cshtml" />
     <Content Include="Views\Roles\Delete.cshtml" />
+    <Content Include="Views\Home\Details.cshtml" />
+    <Content Include="Views\Home\Apply.cshtml" />
+    <Content Include="Views\Home\GetJobByUser.cshtml" />
+    <Content Include="Views\Home\DetailsOfJob.cshtml" />
+    <Content Include="Views\Home\Edit.cshtml" />
+    <Content Include="Views\Home\Delete.cshtml" />
+    <Content Include="Views\Home\GetJobByPublisher.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -398,6 +414,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202003110913106_updatetablejob3.resx">
       <DependentUpon>202003110913106_updatetablejob3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004041248406_applyforjob.resx">
+      <DependentUpon>202004041248406_applyforjob.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004060856338_EditJobModel.resx">
+      <DependentUpon>202004060856338_EditJobModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

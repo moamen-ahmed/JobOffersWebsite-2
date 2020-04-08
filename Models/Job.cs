@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Web;
+using WebApplication2.Models;
 
 namespace JobOffersWebsite.Models
 {
@@ -20,8 +21,10 @@ namespace JobOffersWebsite.Models
         [DisplayName("نوع الوظيفة")]
         public int CategoryId { get; set; }
 
+        public string UserID { get; set; }
+
+        public virtual ApplicationUser User { get; set; }
         public virtual Category Category { get; set; }
-        
     }
 
 }
